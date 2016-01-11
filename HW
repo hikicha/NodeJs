@@ -1,0 +1,21 @@
+var httpObj=require("http");
+var x=0;
+var myServer=httpObj.createServer(
+	function (request,response){
+
+		response.writeHead(200, {'content-type': 'text/html'});
+		response.write('<i> All power is within you</i>');
+		response.end('Hello World\n<b> what is this </b>');
+	}
+
+);
+
+myServer.listen(8081);
+// Just to track
+
+do
+{
+	x=x+1;
+	console.log('server running in ramki\'s machine in Pallikaranai');	
+}while(x<5)
+
